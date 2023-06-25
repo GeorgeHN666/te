@@ -19,7 +19,7 @@ var Config struct {
 
 func ReportScheduleAppointment() error {
 
-	HTML, err := downloadHTMLFile("https://email.zkaia.com/temps/scheduler.html")
+	HTML, err := downloadHTMLFile("https://email.zkaia.com/temps/filler.html")
 	if err != nil {
 		return err
 	}
