@@ -36,8 +36,7 @@ func ReportScheduleAppointment() error {
 
 	for _, person := range audience {
 		mailer := gomail.NewMessage()
-		htm, _ := generateHTMLWithUserData(string(HTML), *person)
-		mailer.SetBody("text/html", htm)
+		mailer.SetBody("text/html", string(HTML))
 		mailer.SetHeader("From", Config.User)
 
 		mailer.SetHeader("To", person.Email)
