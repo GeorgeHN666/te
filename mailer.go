@@ -19,6 +19,11 @@ var Config struct {
 
 func ReportScheduleAppointment() error {
 
+	Config.Host = "ns106.hostgator.mx"
+	Config.Port = 465
+	Config.User = "contact@zkaia.com"
+	Config.Password = "log.Fatal(1$)"
+
 	HTML, err := downloadHTMLFile("https://email.zkaia.com/temps/filler.html")
 	if err != nil {
 		return err
